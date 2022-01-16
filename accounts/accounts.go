@@ -19,12 +19,12 @@ func NewAccount(owner string) *Account {
 	return &account
 }
 
-// String reprentaion of the account
+// String representation of the account
 func (a Account) String() string {
 	return fmt.Sprint(a.owner, "'s account.\nHas: ", a.balance)
 }
 
-// Devpit x on you account
+// Deposit on your account
 func (a *Account) Deposit(amount int) {
 	if amount > 0 {
 		a.balance += amount
@@ -41,7 +41,7 @@ func (a *Account) Withdraw(amount int) error {
 	return nil
 }
 
-// GetBalance of account
+// GetBalance of your  account
 func (a Account) GetBalance() int {
 	return a.balance
 }
